@@ -1,0 +1,104 @@
+:root {
+    --modal-bg: rgba(0, 0, 0, 0.5);
+    --white: #ffffff;
+    --border: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --item-bg: #fafafa;
+    --item-border: #ddd;
+    --text-dark: #030303;
+    --text-dark-hover: #333;
+    --btn-bg: #17d4b8;
+    --btn-bg-hover: #158a78;
+}
+
+.page {
+    position: fixed;
+    inset: 0;
+    background-color: var(--modal-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+
+.cont {
+    display: grid;
+    gap: 10px;
+    background: var(--white);
+    position: relative;
+    padding: 20px 15px;
+    border-radius: 16px;
+    width: 400px;
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 15px var(--shadow);
+    font-family: "Poppins", sans-serif;
+    animation: fadeIn 0.25s ease;
+}
+
+.p {
+    display: flex;
+    align-items: center;
+    background: var(--item-bg);
+    padding: 12px 14px;
+    border-radius: 10px;
+    gap: 12px;
+    border: 1px solid var(--item-border);
+}
+
+.p:hover {
+    outline: none;
+    border-color: #17d4b8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(23, 212, 184, 0.1);
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-dark);
+    transition: 0.2s;
+}
+
+.close:hover {
+    color: var(--text-dark-hover);
+}
+
+.ok {
+    margin-top: 6px;
+    padding: 12px;
+    background: var(--btn-bg);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.ok:hover {
+    background: var(--btn-bg-hover);
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cont {
+        width: 300px;
+    }
+}

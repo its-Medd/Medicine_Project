@@ -1,0 +1,196 @@
+#slider {
+  width: 70%;       /* عرض السلايدر 80% من عرض الصفحة */
+  margin: 0 auto;   /* تمركز السلايدر في الوسط */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slider-image {
+  width: 100%;       /* كل صورة تأخذ كامل عرض السلايدر */
+  flex-shrink: 0;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* الأسهم */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(100, 216, 192, 0.8);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+/* ===== Contact ===== */
+.contactContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contact {
+    width: 60%;
+    background: white;
+    border: 2px solid #64d8c0;
+    border-radius: 20px;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* مسافة جيدة بين الصفوف */
+    font-family: Arial, sans-serif;
+}
+.contact-item {
+    display: flex;
+    align-items: center; /* محاذاة النص مع الأيقونة عموديًا */
+    gap: 10px; /* لا مسافة بين الأيقونة والنص */
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-icon {
+    color: #64d8c0;
+    font-size: 18px; /* نفس حجم النص تقريبًا */
+    line-height: 1; /* يلغي أي ارتفاع إضافي */
+    vertical-align: middle; /* محاذاة وسطية */
+    margin: 0; /* إزالة أي margin افتراضي */
+}
+
+.contact-text {
+    line-height: 1.2;
+}
+
+
+
+
+/* ===== Map ===== */
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin: 20px 0 100px 0;
+}
+
+.mapContainer iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: 3px solid #64d8c0;
+  border-radius: 20px;
+}
+
+.directionBtn {
+  padding: 18px 50px;
+  background-color: #64d8c0;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: background 0.3s;
+}
+
+.directionBtn:hover {
+  background-color: #4ab9a8;
+}
+
+/* ===== Titles ===== */
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* تمركز المحتوى داخل 60% */
+  gap: 10px;
+  margin: 30px auto; /* تمركز الكتلة كاملة في الصفحة */
+  width: 80%; /* المساحة المطلوبة */
+}
+
+.title-container h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #777;
+}
+
+.title-container .line {
+  height: 2px;
+  flex: 1; /* يجعل الخط يمتد لبقية المساحة */
+  max-width: 700px; /* تحدد أقصى طول للخط إذا أحببت */
+  background-color: #c8e9e9;
+}
+
+.tag-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.tag-box {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 3px solid #4cc9b0;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4cc9b0;
+  font-family: "Courier New", monospace;
+}
+
+@media (max-width: 600px) {
+
+
+  #slider {
+    width: 95%;           
+    margin: 0 auto;     
+  }
+
+  .slider-image {
+    height: 200px;     
+  }
+
+  .mapContainer iframe {
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  .directionBtn {
+    width: 90%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 20px;
+    border-radius: 15px;
+  }
+
+
+  .contact {
+    width: 90%;
+  }
+
+  .title-container {
+    width: 95%;
+    gap: 5px;
+  }
+
+  .title-container .line {
+    max-width: 150px;
+  }
+}

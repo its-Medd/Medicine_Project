@@ -1,0 +1,14 @@
+node_modules/
+uploads/
+*.log
+server.out.log
+server.err.log
+
+MyReminder_v2/node_modules/
+MyReminder_v2/build/
+MyReminder_v2/frontend.out.log
+MyReminder_v2/frontend.err.log
+
+.vscode/
+.DS_Store
+Thumbs.db

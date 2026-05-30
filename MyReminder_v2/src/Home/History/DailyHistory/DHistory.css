@@ -1,0 +1,165 @@
+/* History Section */
+.history-section {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 24px 90px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.history-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.history-date {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+}
+
+/* History List */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* History Card */
+.history-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.history-card:hover {
+    background: #f0f0f0;
+    transform: translateX(4px);
+}
+
+/* Medicine Image */
+.history-image {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.history-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
+}
+
+.medicine-icon {
+    font-size: 24px;
+}
+
+/* Medicine Info */
+.history-info {
+    flex: 1;
+}
+
+.history-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.history-time {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Status Badge */
+.history-status {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.history-status.done {
+    color: #00bfa5;
+    background: rgba(0, 191, 165, 0.1);
+}
+
+.history-status.missed {
+    color: #ff5252;
+    background: rgba(255, 82, 82, 0.1);
+}
+
+.history-status.scheduled {
+    color: #1f7a8c;
+    background: rgba(31, 122, 140, 0.12);
+}
+
+/* Card Status Styling */
+.history-card.history-done {
+    opacity: 0.85;
+}
+
+.history-card.history-done .history-image {
+    background: #d0f0e8;
+}
+
+.history-card.history-missed .history-image {
+    background: #ffe8e8;
+}
+
+.history-card.history-scheduled .history-image {
+    background: #e6f5f8;
+}
+
+/* No History */
+.no-history {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+
+/* Mobile */
+@media (max-width: 479px) {
+    .history-section {
+        padding: 16px;
+        margin: 0px 0px;
+    }
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .history-card {
+        padding: 12px;
+    }
+
+    .history-image {
+        width: 45px;
+        height: 45px;
+    }
+}

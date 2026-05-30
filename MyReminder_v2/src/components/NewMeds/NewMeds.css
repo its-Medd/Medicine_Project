@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root {
+    --primary-teal: #00bfa5; /* Matches your project and image */
+    --text-dark: #333333;
+    --text-gray: #666666;
+    --border-light: #E0E0E0;
+    --bg-light: #F8F9FA;
+}
+
+.add-med-page {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.add-med-container {
+    background: white;
+    width: 100%;
+    max-width: 550px; /* Desktop constraint */
+    padding: 30px;
+    border-radius: 20px; /* Rounded corners like design */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* --- Header --- */
+.add-med-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    border-color: var(--primary-teal);
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-teal);
+    margin: 0;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* --- Form Fields --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.sub-label {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 6px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded inputs */
+    font-size: 15px;
+    color: var(--text-dark);
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.form-input:focus {
+    border-color: var(--primary-teal);
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+/* Select Styling */
+.select-wrapper {
+    position: relative;
+}
+
+.select-input {
+    appearance: none;
+    background: white;
+    cursor: pointer;
+}
+
+.select-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-item-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.checkbox-label input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-teal);
+}
+
+.checkbox-label.active-text {
+    color: var(--primary-teal); /* Teal text when checked */
+}
+
+/* Time Input inside Checkbox section */
+.time-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--primary-teal); /* Cyan border */
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 8px;
+    width: fit-content;
+    min-width: 200px;
+}
+
+.time-input-wrapper input {
+    border: none;
+    outline: none;
+    color: var(--primary-teal);
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.time-icon {
+    color: var(--primary-teal);
+}
+
+/* Upload Box */
+.upload-box {
+    border: 2px dashed #ddd;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+.upload-text {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+}
+
+.upload-subtext {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.browse-btn {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Date Input Wrapper */
+.date-input-wrapper {
+    position: relative;
+}
+
+.form-input.with-icon {
+    padding-left: 45px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* Toggles Section */
+.toggles-section {
+    background: var(--bg-light);
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.toggle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+}
+
+.toggle-row:first-child {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.toggle-label {
+    font-weight: 600;
+    color: #666;
+    font-size: 15px;
+}
+
+.toggle-label.active-text {
+    color: var(--primary-teal);
+}
+
+.toggle-switch {
+    width: 44px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toggle-switch.on {
+    background-color: var(--primary-teal);
+}
+
+.toggle-switch.on .toggle-circle {
+    transform: translateX(20px);
+}
+
+/* Save Button */
+.save-btn-large {
+    width: 100%;
+    background-color: #00d2b4; /* Slightly brighter teal for button */
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-btn-large:hover {
+    background-color: var(--primary-teal);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 600px) {
+    .add-med-page {
+        padding: 0;
+        background: white;
+    }
+    .add-med-container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .time-input-wrapper {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

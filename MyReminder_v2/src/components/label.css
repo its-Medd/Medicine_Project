@@ -1,0 +1,95 @@
+:root {
+    --label-color: #888;
+    --input-bg: #fff;
+    --input-border: #ddd;
+    --input-shadow: rgba(0, 0, 0, 0.06);
+    --placeholder: #aaa;
+    --text-main: #333;
+    --modif-color: #17d4b8;
+    --divider: #888;
+}
+
+.fullname,
+.email,
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--label-color);
+    text-align: left;
+}
+
+.fullname div,
+.email div,
+.password div {
+    display: flex;
+    align-items: center;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    padding: 12px 14px;
+    border-radius: 12px;
+    gap: 10px;
+    box-shadow: 0 2px 5px var(--input-shadow);
+}
+
+.input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.fullname div:hover,
+.email div:hover,
+.password div:hover {
+    outline: none;
+    border-color: #17d4b8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(23, 212, 184, 0.1);
+}
+
+.input::placeholder {
+    color: var(--placeholder);
+}
+
+.modif {
+    position: relative;
+    padding-left: 5px;
+    cursor: pointer;
+    color: var(--modif-color);
+}
+.modif:hover{
+    color: var(--primary-color-hover);
+}
+
+.modif::before {
+    content: "";
+    position: absolute;
+    top: -18%;
+    left: 0;
+    height: 30px;
+    width: 1px;
+    background-color: var(--divider);
+}
+
+@media screen and (max-width: 768px) {
+    .modif::before {
+        height: 30px;
+        top: -30%;
+        width: 1px;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+}

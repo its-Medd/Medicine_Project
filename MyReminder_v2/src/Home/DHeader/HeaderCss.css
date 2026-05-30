@@ -1,0 +1,100 @@
+:root{
+    --primary-color : #363636FF;
+    --second-color: rgba(53, 197, 207, 0.77);
+    --third-color: rgba(0, 200, 179, 0.69);
+}
+
+.headnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 18px 4px 22px;
+    gap: 16px;
+}
+
+.greet-prefix {
+    margin: 0 0 6px;
+    color: #7b8b8a;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.greet {
+    font-family: "Roboto", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.35rem);
+    font-weight: 750;
+    margin: 0;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+.UserName {
+    color: var(--second-color);
+    margin-left: 10px;
+}
+
+.NotifBtn {
+    position: relative;
+    background: #f7fffe;
+    border: 1px solid rgba(0, 191, 165, 0.16);
+    border-radius: 18px;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    box-shadow: 0 10px 24px rgba(0, 191, 165, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.NotifBtn:hover {
+    transform: translateY(-1px);
+    border-color: rgba(0, 191, 165, 0.35);
+    box-shadow: 0 12px 26px rgba(0, 191, 165, 0.15);
+}
+
+.NotifBtn.enabled {
+    color: #00bfa5;
+}
+
+.NotifBtn.blocked {
+    color: #d86969;
+}
+
+.NotifCount {
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    background: #00bfa5;
+    color: white;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+@media (max-width: 768px) {
+    .headnav {
+        padding: 6px 0 18px;
+        align-items: center;
+    }
+
+    .greet-prefix {
+        font-size: 0.8rem;
+    }
+
+    .NotifBtn {
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+    }
+}
